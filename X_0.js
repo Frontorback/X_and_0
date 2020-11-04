@@ -7,7 +7,7 @@ board: new Array(9).fill(EMPTY_CELL),
 };
 
 crossGame.boardEl = document.querySelector('.cross__board');
-crossGame.cellItems = crossGame.boardEl.querySelectorAll('.cross__board-item');
+crossGame.cellItems = document.querySelectorAll('.cross__board-item');
 
 crossGame.step = function (idxCell, el) {
     if (crossGame.board[idxCell] === EMPTY_CELL) {
@@ -65,6 +65,6 @@ crossGame.createItemX = function(){
 }
 crossGame.step(0,X_CELL);
 crossGame.step(1, O_CELL);
-//console.log(crossGame);
-//console.log(crossGame.createItemX());
-//console.log(crossGame.createItemO())
+console.log(crossGame);
+console.log(crossGame.createItemX());
+console.log(crossGame.createItemO())
