@@ -74,6 +74,7 @@ stroke-dashoffset: 0;
     height: 100px;
 
     justify-content: center;
-
+    
+    background-color: yellow;
     border: 1px  solid grey;
 }
