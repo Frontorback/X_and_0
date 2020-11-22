@@ -62,3 +62,18 @@ stroke-dashoffset: 0;
     
     
 }
+
+.cross__board-item:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+.cross__winner {
+    display: flex;
+    width: 200px;
+    height: 100px;
+
+    justify-content: center;
+
+    border: 1px  solid grey;
+}
