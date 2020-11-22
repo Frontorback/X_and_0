@@ -69,11 +69,16 @@ stroke-dashoffset: 0;
 }
 
 .cross__winner {
-    display: flex;
+    display: none;
+
+    justify-content: center;
+    position: absolute;
     width: 200px;
     height: 100px;
 
-    justify-content: center;
+    margin-left: 25%;
+
+    z-index: 2;
     
     background-color: yellow;
     border: 1px  solid grey;

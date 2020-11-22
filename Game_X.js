@@ -30,13 +30,20 @@ crossGame.cellItems = crossGame.boardEl.querySelectorAll('.cross__board-item');
 
 crossGame.onAnimationEnd = function () {
     console.log('onAnimationEnd', this);
-
+    const divEl = document.getElementsByClassName('.cross__winner');
     if (crossGame.gameEnded ) {
+
+        return  divEl.style.display = "flex";
+
+        // return function(){
+        //     document.querySelectorAll('cross__winner').style.display = 'flex';
+        // } 
+
         
-        return  Winner();    
+        //return  Winner();    
         
         
-       // alert('You win');
+    //    return alert('You win');
     }else {
         this.stepEnable = true
     }
@@ -190,10 +197,10 @@ crossGame.isWin= function (expectedEl){
     }
     return false;
 }
-//crossGame.step(0,X_CELL);
-//crossGame.step(1, O_CELL);
-//crossGame.step(3,X_CELL);
-//crossGame.step(6,X_CELL);
+ crossGame.step(0,X_CELL);
+// crossGame.step(1, O_CELL);
+// crossGame.step(3,X_CELL);
+// crossGame.step(4,O_CELL);
 
 console.log(crossGame.cellItems);
 
@@ -247,14 +254,14 @@ crossGame.isWin();
 
 
 
-function Winner () {
+// function Winner () {
    
-    const divEl = document.createElement('div');
-    divEl.classList.add('cross__winner');
-    divEl.innerText = 'You win!';
+//     const divEl = document.createElement('div');
+//     divEl.classList.add('cross__winner');
+//     divEl.innerText = 'You win!';
 
-    return divEl;
+//     return divEl;
     
     
-}
+// }
 
