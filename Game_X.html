@@ -12,12 +12,16 @@
     
     <div class="cross">
         <div class="cross_timers">
-            <div class="cross__timer cross__timer--x"></div>
-            <div class="cross__timer cross__timer--game"></div>
-            <div class="cross__timer cross__timer--o"></div>
+            <div class="cross__timer cross__timer--x">Timer - X:</div>
+            <div class="cross__timer cross__timer--o">Timer - O:</div>
+            <div class="cross__timer cross__timer--game">Timer - Game:</div>
+            
         </div>
         <div class="cross__board">
-            <div  class="cross__winner">winner</div>
+            <div  class="cross__winner" id="cross__winner">
+                <p class="cross__text">You Win!</p>
+                <button class="cross__button"  value="Refresh Page" onClick="window.location.reload();" >Restart?</button>
+            </div>
             <div class="cross__board-item"></div>
             <div class="cross__board-item"></div>
             <div class="cross__board-item"></div>

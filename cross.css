@@ -1,27 +1,38 @@
+html{
+    background-color: rgba(210, 210, 210, 1);
+}
+
 .cross__board {
     display: flex;
     flex-wrap: wrap;
     max-width: 600px;
     width: 100%;
-    border: 1px solid black ;
+    /* border: 1px solid black ; */
 
     margin: 0 auto;
-
+   
     box-sizing:  border-box;
 }
 
 .cross__board-item{
     position: relative;
-    flex: 1 0 33%;
+    flex: 1 0 30%;
     padding-top: 33%;
     height: 0;
+
+    border-radius: 20px;
    
     border: 1px solid black;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    
 
 }
-.x, .o{
-    stroke: black ;
+.x{
+    stroke:   rgba(74, 74, 74, 1);
+    stroke-linecap: round;
+}
+.o{
+    stroke:   rgba(255, 255, 255, 1);
     stroke-linecap: round;
 }
 .o{
@@ -32,6 +43,7 @@
 }
 .x__line1,
 .x__line2{
+    
     stroke-dasharray: 7,08;
     stroke-dashoffset: 0;
     animation: x-o 2s linear 0s 1 normal backwards;
@@ -63,23 +75,50 @@ stroke-dashoffset: 0;
     
 }
 
-.cross__board-item:hover {
-    background-color: blue;
+.cross__board-item {
+    background-color:  rgba(107, 234, 255, 1);
     cursor: pointer;
 }
 
 .cross__winner {
     display: none;
+    flex-wrap: wrap;
 
     justify-content: center;
-    position: absolute;
-    width: 200px;
-    height: 100px;
+    align-items: center;
+    position: absolute; 
+    width: 400px;
+    height: 200px;
+    font-size: 60px;
+    color: rgba(255, 0, 224, 1);
 
-    margin-left: 25%;
+    left: 50%;
+    top: 50%;
+
+    margin-left: -200px;
+    margin-top: -220px;
 
     z-index: 2;
-    
+    box-sizing:  border-box;
     background-color: yellow;
     border: 1px  solid grey;
+    border-radius: 20px;
+}
+
+.cross__timer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.cross_text {
+    
+}
+.cross__button {
+    
+    position: absolute;
+    border-radius: 20px;
+    top: 140px;
+    background-color: rgba(107, 234, 255, 1);
+    
+    
 }

@@ -30,10 +30,15 @@ crossGame.cellItems = crossGame.boardEl.querySelectorAll('.cross__board-item');
 
 crossGame.onAnimationEnd = function () {
     console.log('onAnimationEnd', this);
-    const divEl = document.getElementsByClassName('.cross__winner');
+    const divEl = document.getElementById('cross__winner');
+    
+
+   // const divEl = document.getElementsByClassName('cross__winner');
     if (crossGame.gameEnded ) {
 
         return  divEl.style.display = "flex";
+        // divEl.innerHTML = `${}`;
+        
 
         // return function(){
         //     document.querySelectorAll('cross__winner').style.display = 'flex';
@@ -44,7 +49,8 @@ crossGame.onAnimationEnd = function () {
         
         
     //    return alert('You win');
-    }else {
+        }
+ else {
         this.stepEnable = true
     }
 }
@@ -197,7 +203,7 @@ crossGame.isWin= function (expectedEl){
     }
     return false;
 }
- crossGame.step(0,X_CELL);
+// crossGame.step(0,X_CELL);
 // crossGame.step(1, O_CELL);
 // crossGame.step(3,X_CELL);
 // crossGame.step(4,O_CELL);
@@ -223,12 +229,20 @@ crossGame.userStep = function(idxCell) {
         [X_CELL]: timerX,
         [O_CELL]: timerO
     }
+
+   
     if(this.step(idxCell, currentUser)) {
         userTimer[currentUser].pause();
         this.currentUser = [X_CELL, O_CELL].find(function (user) { return user !== currentUser;});
         userTimer[this.currentUser].start();
     }
     
+    if(crossGame.gameEnded){
+        userTimer[currentUser].pause();
+        this.gameTimer.pause();
+
+    }
+
     
 
 }
