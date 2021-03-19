@@ -267,15 +267,3 @@ crossGame.isWin();
 
 
 
-
-// function Winner () {
-   
-//     const divEl = document.createElement('div');
-//     divEl.classList.add('cross__winner');
-//     divEl.innerText = 'You win!';
-
-//     return divEl;
-    
-    
-// }
-
